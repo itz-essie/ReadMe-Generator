@@ -19,12 +19,7 @@ const questions = [
       message: 'Re-enter password to confirm:',
       name: 'confirm',
     },
-  ]
-  .then((response) =>
-    response.confirm === response.password
-      ? console.log('Success!')
-      : console.log('You forgot your password already?!')
-  );    
+  ]   
 
 // TODO: Create a function to write README file
 function writeFile(fileName, data) {
@@ -34,6 +29,7 @@ function writeFile(fileName, data) {
 // TODO: Create a function to initialize app
 function init() {
     inquirer.prompt(questions).then((response) => {
+        console.log (response)
         writeFile("README.md", generateReadMe())
     })
 };
