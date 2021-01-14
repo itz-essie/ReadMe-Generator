@@ -36,8 +36,8 @@ inquirer
         name: 'install',
       },
     ]).then((answers) => {
-        const filename = `${answers.name}.md`;
-        return asyncWrite(filename, questions (answers) )}
+        const nameOfFile = `${answers.name}.md`;
+        return asyncWrite(nameOfFile, questions (answers) )}
     ) .then (()=>{ console.log("Success!")}).catch ((err)=>{console.log(err)}) ;
     // err ? console.log(err) : console.log("Success!")
   
