@@ -19,7 +19,7 @@ const questions = (answers) => {
 } else if (answers.license === 'Mozilla Public License 2.0'){
 badge = '[![License: MPL 2.0](https://img.shields.io/badge/License-MPL%202.0-brightgreen.svg)](https://opensource.org/licenses/MPL-2.0)'
 }
-  return`# ${answers.title} ${badge}
+  return`# ${answers.title}${badge}
 
 ## Description
 
@@ -117,21 +117,13 @@ inquirer
     },
   ])
   .then((answers) => {
-    const nameOfFile = `${answers.title}.md`;
+    const nameOfFile = `Readme.md`;
     return asyncWrite(nameOfFile, questions(answers));
   })
   .then(() => {
-    console.log("Success!");
   })
   .catch((err) => {
-    console.log(err);
   });
-
-
-
-
-  
-// err ? console.log(err) : console.log("Success!")
 
 // TODO: Create a function to write README file
 function writeFile(fileName, data) {
