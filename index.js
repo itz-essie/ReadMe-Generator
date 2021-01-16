@@ -5,7 +5,51 @@ const util = require("util"); //library
 const asyncWrite = util.promisify(fs.writeFile); //method like document.ready
 
 // TODO: Create an array of questions for user input
-const questions = (answers) => `<h1> Hi! My name is ${answers.name} </h1>`;
+const questions = (answers) => `# ${answers.title}
+
+## Description
+
+${answers.description}
+
+## Table of Contents
+
+- [Installation](#installation)
+- [Usage](#usage)
+- [License](#license)
+- [Contributions](#contributions)
+- [Tests](#tests)
+- [Questions](#questions)
+
+### Installation
+
+\`\`\`
+${answers.install}
+\`\`\`
+
+### Usage
+
+${answers.usage}
+
+### License
+
+This project is licensed under an ${answers.license} license.
+
+## Contributing
+
+${answers.contributions}
+
+## Tests
+
+To run test, run the following commands:
+
+\`\`\`
+${answers.tests}
+\`\`\`
+
+## Questions
+
+- If you have any questions regarding this repository, contact me either by email at **${answers.email}**, or you can find more of my work within my github account attached below: 
+**[${answers.gitHub}](https://github.com/${answers.gitHub})**.`
 
 function init(){
 inquirer
@@ -23,7 +67,7 @@ inquirer
     {
       type: "input",
       message: "What is the title of your project?",
-      name: "name",
+      name: "title",
     },
     {
       type: "input",
@@ -54,11 +98,11 @@ inquirer
     {
       type: "input",
       message: "In order to run test, what command line shouls be run?",
-      name: "test",
+      name: "tests",
     },
   ])
   .then((answers) => {
-    const nameOfFile = `${answers.name}.md`;
+    const nameOfFile = `${answers.title}.md`;
     return asyncWrite(nameOfFile, questions(answers));
   })
   .then(() => {

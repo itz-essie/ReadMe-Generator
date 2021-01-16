@@ -1,4 +1,4 @@
-# ${answers.name}
+# ${answers.title}
 
 ## Description
 
@@ -6,10 +6,10 @@ ${answers.description}
 
 ## Table of Contents
 
-- [Installation](#installation)
+- [Installation](#install)
 - [Usage](#usage)
 - [License](#license)
-- [Contributing](#contributing)
+- [Contributions](#contributions)
 - [Tests](#tests)
 - [Questions](#questions)
 
@@ -25,21 +25,21 @@ ${answers.usage}
 
 ### License
 
-This project is licensed under an ${answers.License} license.
+This project is licensed under an ${answers.license} license.
 
 ## Contributing
 
-${answers.contributingGuidelines}
+${answers.contributions}
 
 ## Tests
 
 To run test, run the following commands:
 
 ```
-${answers.testInstructions}
+${answers.tests}
 ```
 
 ## Questions
 
 - If you have any questions regarding this repository, contact me either by email at [Email](${answers.email}), or you can find more of my work within my github account attached below. Here, you can open an issue if needed.
-- [${answers.github}](https://github.com/${answers.github})
+- [${answers.gitHub}](https://github.com/${answers.gitHub}).
