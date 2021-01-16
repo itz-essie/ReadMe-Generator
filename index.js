@@ -88,7 +88,7 @@ inquirer
       type: "list",
       message: "What type of license should your project have?",
       name: "license",
-      choices: ['GPLv3', 'MIT', 'Apache 2.0', 'BSD']
+      choices: ['GPLv3', 'MIT' + '[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)', 'Apache 2.0', 'BSD']
     },
     {
       type: "input",
