@@ -5,7 +5,17 @@ const util = require("util"); //library
 const asyncWrite = util.promisify(fs.writeFile); //method like document.ready
 
 // TODO: Create an array of questions for user input
-const questions = (answers) => `# ${answers.title} + badge
+const questions = (answers) => { 
+
+  let badge;
+   if (answers.license === 'GPLv3'){
+  badge = '[![License: GPL v3](https://img.shields.io/badge/License-GPL%20v3-blue.svg)](http://www.gnu.org/licenses/gpl-3.0)'
+} else if (answers.license === 'MIT'){
+  badge = '[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)'
+} else {
+  badge = '[![License: IPL 1.0](https://img.shields.io/badge/License-IPL%201.0-blue.svg)](https://opensource.org/licenses/IPL-1.0)'
+}
+  return`# ${answers.title} ${badge}
 
 ## Description
 
@@ -51,7 +61,7 @@ ${answers.tests}
 - If you have any questions regarding this repository, contact me either by email at **${answers.email}**, or you can find more of my work within my github account attached below: 
 **[${answers.gitHub}](https://github.com/${answers.gitHub})**.`
 
-
+}
 function init(){
 inquirer
   .prompt([
@@ -112,15 +122,9 @@ inquirer
   .catch((err) => {
     console.log(err);
   });
-  /* else if statement to print badge next to the title
-  if (choices === 'GPLv3'){
-  badge = '[![License: GPL v3](https://img.shields.io/badge/License-GPL%20v3-blue.svg)](http://www.gnu.org/licenses/gpl-3.0)'
-} else if (choices === 'MIT'){
-  badge = '[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)'
-} else {
-  badge = '[![License: IPL 1.0](https://img.shields.io/badge/License-IPL%201.0-blue.svg)](https://opensource.org/licenses/IPL-1.0)'
-}
-*/
+
+
+
 
   
 // err ? console.log(err) : console.log("Success!")
