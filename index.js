@@ -12,8 +12,12 @@ const questions = (answers) => {
   badge = '[![License: GPL v3](https://img.shields.io/badge/License-GPL%20v3-blue.svg)](http://www.gnu.org/licenses/gpl-3.0)'
 } else if (answers.license === 'MIT'){
   badge = '[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)'
-} else {
+} else if (answers.license === 'Apache 2.0'){
+  badge = '[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)'
+} else if (answers.license === 'IBM'){
   badge = '[![License: IPL 1.0](https://img.shields.io/badge/License-IPL%201.0-blue.svg)](https://opensource.org/licenses/IPL-1.0)'
+} else if (answers.license === 'Mozilla Public License 2.0'){
+badge = '[![License: MPL 2.0](https://img.shields.io/badge/License-MPL%202.0-brightgreen.svg)](https://opensource.org/licenses/MPL-2.0)'
 }
   return`# ${answers.title} ${badge}
 
@@ -99,7 +103,7 @@ inquirer
       type: "list",
       message: "What type of license should your project have?",
       name: "license",
-      choices: ['GPLv3', 'MIT', 'Apache 2.0', 'BSD']
+      choices: ['GPLv3', 'MIT', 'Apache 2.0', 'IBM', 'Mozilla Public License 2.0']
     },
     {
       type: "input",
