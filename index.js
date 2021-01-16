@@ -7,6 +7,7 @@ const asyncWrite = util.promisify(fs.writeFile); //method like document.ready
 // TODO: Create an array of questions for user input
 const questions = (answers) => `<h1> Hi! My name is ${answers.name} </h1>`;
 
+function init(){
 inquirer
   .prompt([
     {
@@ -72,6 +73,11 @@ inquirer
 function writeFile(fileName, data) {
   fs.writeFile(fileName, data);
 }
+}
+init();
+
+
+
 
 // TODO: Create a function to initialize app
 // function init() {
