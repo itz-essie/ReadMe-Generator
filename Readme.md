@@ -40,12 +40,11 @@ node index.js
 ```
 
 ## Demo 
-![ Deployed Demo](./Assets/demo.mp4)
+![ Deployed Demo](./Assets/readmedemo.gif)
 
 
 ## Links 
-1. 
-2. 
+1. Repository- https://github.com/itz-essie/ReadMe-Generator
 
 ## Questions
 
