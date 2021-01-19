@@ -19,7 +19,7 @@ const questions = (answers) => {
 } else if (answers.license === 'Mozilla Public License 2.0'){
 badge = '[![License: MPL 2.0](https://img.shields.io/badge/License-MPL%202.0-brightgreen.svg)](https://opensource.org/licenses/MPL-2.0)'
 }
-  return`# ${answers.title}${badge}
+  return`# ${answers.title} ${badge}
 
 ## Description
 
@@ -112,7 +112,7 @@ inquirer
     },
     {
       type: "input",
-      message: "In order to run test, what command line shouls be run?",
+      message: "In order to run test, what command line should be run?",
       name: "tests",
     },
   ])
