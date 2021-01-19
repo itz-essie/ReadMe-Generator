@@ -2,7 +2,7 @@
 
 ## Description
 
-Created a comman-line application to generate a high-quality, professional README.
+Created a command-line application to generate a high-quality, professional README.
 
 ## Table of Contents
 
