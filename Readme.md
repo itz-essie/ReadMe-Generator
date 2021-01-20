@@ -28,7 +28,7 @@ User will be promoted to answer questions regarding their project. Once they ans
 
 ### License
 
-N/A
+This project is licensed under an MIT license.
 
 ## Contributions
 
