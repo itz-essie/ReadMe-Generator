@@ -12,7 +12,7 @@ Created a command-line application to generate a high-quality, professional READ
 - [Contributions](#contributions)
 - [Tests](#tests)
 - [Demo](#demo)
-- [Technologies Used](#technologiesused)
+- [Technologies Used](#technologies used)
 - [Links](#links)
 - [Questions](#questions)
 
