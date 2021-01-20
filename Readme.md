@@ -11,6 +11,9 @@ Created a command-line application to generate a high-quality, professional READ
 - [License](#license)
 - [Contributions](#contributions)
 - [Tests](#tests)
+- [Demo](#demo)
+- [Technologies Used](#technologiesused)
+- [Links](#links)
 - [Questions](#questions)
 
 ### Installation
@@ -25,7 +28,7 @@ User will be promoted to answer questions regarding their project. Once they ans
 
 ### License
 
-This project is licensed under an MIT license.
+N/A
 
 ## Contributions
 
@@ -36,12 +39,19 @@ N/A
 To run test, run the following commands:
 
 ```
+npm install 
 node index.js
 ```
 
 ## Demo 
 ![ Deployed Demo](./Assets/readmedemo.gif)
 
+
+### Technologies Used
+- Node
+- Terminal 
+- VS Code
+- Javascrip
 
 ## Links 
 1. Repository- https://github.com/itz-essie/ReadMe-Generator
